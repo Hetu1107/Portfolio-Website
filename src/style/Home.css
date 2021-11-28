@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;400;500;600;700;800;900&family=Montserrat:wght@100;300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@100;300;400;500;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+.main_home_page {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  height: 200vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: transparent;
+  left: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.front_main_page {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  overflow-y: hidden;
+}
+.front_main_page img{
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 90%;
+    opacity: 0.15;
+    z-index: -1;
+}
+#scroll_down{
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    margin: 0;
+    padding: 0;
+    writing-mode: vertical-rl;
+    color: #fd1056;
+    color: white;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#scroll_down i{
+    margin-top: 4px;
+    font-weight: 100;
+}
+#scroll{
+    animation: ani 1s infinite;
+}
+@keyframes ani{
+    0%{
+        margin-bottom: 15px;
+    }
+    50%{
+        margin-bottom: 1px;
+    }
+    100%{
+        margin-bottom: 15px;
+    }
+}
+.front_name {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+  top: 20%;
+}
+.frontpage_name {
+  margin: 0;
+  padding: 0;
+  font-size: 6vw;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+.text_text{
+    transition: all 300ms ease;
+    animation-iteration-count: 1;
+}
+@keyframes animation{
+    0%{
+        transform: translate3d(0,0,0);
+        text-shadow: 0em 0em 0  #08fdd8;
+    }
+    30%{
+        transform: translate3d(0,0,0);
+        text-shadow: 0em 0em 0 #08fdd8;
+    }
+    70%{
+        transform: translate3d(0.08em,-0.08em,0);
+        text-shadow: 0.08em 0.08em #08fdd8;
+    }
+    100%{
+        transform: translate3d(0.08em,-0.08em,0);
+        text-shadow: 0.08em 0.08em #08fdd8;
+    }
+}
+.text_text:hover{
+    color: #fd1056;
+    animation-name: bounce;
+    animation: animation 600ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+}
+.frontpage_name {
+  margin: 0;
+  padding: 0;
+}
+#d {
+  margin-left: 25px;
+}
+#text {
+  margin-left: 25px;
+  color: #fd1056;
+  text-shadow: 0px 0px 0 #08fdd8, -1px 0px 0 #08fdd8, -2px 0px 0 #08fdd8,
+    -3px 0px 0 #08fdd8, -4px 0px 0 #08fdd8, -5px 0px 0 #08fdd8,
+    -6px 0px 0 #08fdd8, -7px 0px 6px rgba(0, 0, 0, 1),
+    -7px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.about{
+    color: #8d8d8d;
+    font-size: 1.1vw;
+    font-family: "Libre Franklin", sans-serif;
+    letter-spacing: 4px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    margin-top: 4px;
+}
+.front_contact{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 4px;
+    width: fit-content;
+    height: 50px;
+    width: 20vw;
+    cursor: pointer;
+    border: 1px solid #08fdd8;
+    margin: 20px 0;
+    transition: all 300ms ease;
+    text-decoration: none;
+    color: #08fdd8;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 200;
+    transition: ease-out 0.4s;
+}
+.front_contact:hover{
+    letter-spacing: 6px;
+    box-shadow: inset 400px 0 0 0 #08fdd8;
+    color: black;
+}
+
+@media only screen and (max-width: 1300px) {
+  .main_home_page {
+    left: 0;
+    width: 100vw;
+  }
+  .front_main_page img{
+      height: 50%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .frontpage_name {
+    font-size: 8vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .frontpage_name {
+    font-size: 10vw;
+  }
+  .front_name {
+    top: 35%;
+  }
+  .front_contact{
+      width: 25vw;
+      font-size: 2vw;
+  }
+  .about{
+      font-size: 3vw;
+  }
+}

@@ -1,0 +1,8 @@
+main body : #272727
+body light : #747474
+orange : #FF652F
+yellow : #FFE400
+green : #14A76C
+purple : rgb(102, 0, 255)
+light blue : #08fdd8
+pink : #fd1056
