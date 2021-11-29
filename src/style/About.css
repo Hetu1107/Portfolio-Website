@@ -1,0 +1,108 @@
+.tagcloud {
+  font-family: 'Poppins', sans-serif;  
+  font-size: 20px;
+  font-weight: 650;
+  /* margin-left: 30%; */
+}
+.tagcloud--item:hover {
+  color: #36454F;
+}
+#content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  padding: 0;
+  top: 300vh;
+  position: absolute;
+}
+.main_about_my_sef{
+  width: 100%;
+  min-height: 100vh;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.main_about_my_self_left{
+  width: 45vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_about_my_self_left h1{
+  font-size: 5vw;
+  color: #08fdd8;
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-weight: 700;
+  transition: all 200ms ease;
+}
+.main_about_my_self_left h1:hover{
+  color: #fd1056;
+}
+.main_about_my_self_left p{
+  line-height: 25px;
+  width: 80%;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-left: 15px;
+  font-weight: 300;
+}
+.main_about_my_self_left a{
+  text-decoration: none;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fd1056;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.main_about_my_self_left a:hover{
+  color: #08fdd8;
+}
+.main_about_my_self_right{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+}
+
+@media only screen and (max-width: 1300px){
+  .main_about_my_self_left{
+    width: 50vw;
+  }
+  .main_about_my_self_right{
+    width: 50vw;
+  }
+}
+@media only screen and (max-width: 700px){
+  .main_about_my_self_left{
+    width: 100vw;
+    height: fit-content;
+  }
+  .main_about_my_self_right{
+    width: 100vw;
+    height: fit-content;
+  }
+  .main_about_my_sef{
+    margin-top: 100px;
+  }
+}

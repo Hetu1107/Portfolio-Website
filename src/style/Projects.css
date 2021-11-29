@@ -1,0 +1,111 @@
+.main_project_page {
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main_project_page_head {
+  width: 100%;
+  height: fit-content;
+  padding: 5px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main_project_page_head h1 {
+  font-size: 5vw;
+  color: #08fdd8;
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-weight: 700;
+  transition: all 200ms ease;
+}
+.main_project_page_data{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 10px;
+}
+.main_project_page_databox{
+    width: 22.5vw;
+    max-width: 22.5vw;
+    height: 22.5vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0.5;
+    position: relative;
+}
+.main_project_page_data_img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: all 300ms ease;
+    position: relative;
+}
+.main_project_page_data_img img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-clip: inherit;
+}
+.main_project_page_data_round{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_project_page_data_round a{
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
+    background-color:  #fd1056;
+    color: rgb(255, 255, 255);
+    font-size: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    transition: all 300ms ease;
+}
+
+@media only screen and (max-width: 1300px){
+    .main_project_page_databox{
+        width: 25vw;
+        max-width: 25vw;
+        height: 25vw;
+    }
+}
+/* @media only screen and (max-width: 700px){
+    .main_project_page_databox{
+        width: 33.33vw;
+        max-width: 33.33vw;
+        height: 33.33vw;
+    }
+} */
+@media only screen and (max-width: 700px){
+    .main_project_page_databox{
+        width: 50vw;
+        max-width: 50vw;
+        height: 50vw;
+    }
+}

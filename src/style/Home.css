@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: row;
   width: 90vw;
-  height: 200vh;
+  min-height: 100vh;
+  height: fit-content;
   padding: 0;
   margin: 0;
   position: relative;
@@ -15,7 +16,7 @@
 
 .front_main_page {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,13 +26,25 @@
   position: relative;
   overflow-y: hidden;
 }
-.front_main_page img{
+#front_lotti{
     position: absolute;
     right: 0;
     width: 50vw;
-    height: 90%;
-    opacity: 0.15;
+    height: 80%;
+    opacity: 1;
     z-index: -1;
+    animation : img 2s infinite;
+}
+@keyframes img{
+  0%{
+    margin-bottom: 50px;
+}
+50%{
+    margin-bottom: 1px;
+}
+100%{
+    margin-bottom: 50px;
+}
 }
 #scroll_down{
     position: absolute;
@@ -84,6 +97,7 @@
   font-family: "Libre Franklin", sans-serif;
   font-weight: 600;
   color: white;
+
 }
 .text_text{
     transition: all 300ms ease;
@@ -170,13 +184,16 @@
     width: 100vw;
   }
   .front_main_page img{
-      height: 50%;
+      height: 60%;
   }
 }
 @media only screen and (max-width: 1000px) {
   .frontpage_name {
     font-size: 8vw;
   }
+  #front_lotti{
+    height: 50%;
+}
 }
 @media only screen and (max-width: 700px) {
   .frontpage_name {
@@ -192,4 +209,20 @@
   .about{
       font-size: 3vw;
   }
+  #front_lotti{
+    height: 50%;
+    width : 70vw;
+    opacity: 0.5;
+}
+}
+@media only screen and (max-width: 350px){
+  .front_contact{
+    width: 30vw;
+    font-size: 12px;
+    font-weight: 500;
+}
+  #front_lotti{
+    height: 40%;
+    width : 100vw;
+}
 }
