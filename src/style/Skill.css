@@ -1,9 +1,10 @@
 .main_skills_page{
     width: 90vw;
     height: fit-content;
+    max-height: fit-content;
     margin-top: 50px;
     padding: 10px 0;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
