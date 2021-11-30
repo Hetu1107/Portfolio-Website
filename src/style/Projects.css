@@ -1,5 +1,5 @@
 .main_project_page {
-  width: 100%;
+  width: 90vw;
   height: fit-content;
   min-height: 100vh;
   display: flex;
@@ -7,14 +7,18 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  left: 10vw;
+  overflow: hidden;
 }
 .main_project_page_head {
   width: 100%;
   height: fit-content;
   padding: 5px 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .main_project_page_head h1 {
   font-size: 5vw;
@@ -22,10 +26,25 @@
   font-family: "Libre Franklin", sans-serif;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
   margin-left: 10px;
   font-weight: 700;
   transition: all 200ms ease;
+}
+.main_project_page_head a{
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border: 1px solid #08fdd8;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: "Libre Franklin", sans-serif;
+    color: white;
+    transition: all 200ms ease;
+}
+.main_project_page_head a:hover{
+    background-color: #08fdd8;
+    color: black;
 }
 .main_project_page_data{
     display: flex;
@@ -37,75 +56,388 @@
     height: fit-content;
     margin-top: 10px;
 }
-.main_project_page_databox{
+.animation_box{
     width: 22.5vw;
-    max-width: 22.5vw;
     height: 22.5vw;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    opacity: 0.5;
-    position: relative;
-}
-.main_project_page_data_img{
-    width: 100%;
-    height: 100%;
-    transform: scale(1);
-    transition: all 300ms ease;
-    position: relative;
-}
-.main_project_page_data_img img{
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-clip: inherit;
-}
-.main_project_page_data_round{
-    position: absolute;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.main_project_page_data_round a{
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    text-decoration: none;
-    border: none;
-    background-color:  #fd1056;
-    color: rgb(255, 255, 255);
-    font-size: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.288);
     margin: 0;
     padding: 0;
-    transition: all 300ms ease;
+    transition: all 200ms ease;
+}
+.data_box{
+    width: 22.5vw;
+    height: 22.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease;
+    text-align: center;
+}
+.data_box:nth-child(3){
+    background-color: rgba(255, 255, 255, 0.288);
+}
+.data_box:nth-child(6){
+    background-color: rgba(255, 255, 255, 0.288);
+}
+.data_box:nth-child(8){
+    background-color: rgba(255, 255, 255, 0.288);
+}
+.data_box:nth-child(3):hover{
+    background-color: white;
+}
+.data_box:nth-child(6):hover{
+    background-color: white;
+}
+.data_box:nth-child(8):hover{
+    background-color: white;
+}
+.data_box:hover{
+    background-color: rgba(255, 255, 255, 0.288);
 }
 
+.data_box h1{
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.308);
+    font-size: 35px;
+    font-family: "Libre Franklin", sans-serif;
+    margin-bottom: 10px;
+    transition: all 200ms ease;
+}
+.data_box:nth-child(3) h1{
+    color: rgb(255, 255, 255);
+}
+.data_box:nth-child(6) h1{
+    color: rgb(255, 255, 255);
+}
+.data_box:nth-child(8) h1{
+    color: rgb(255, 255, 255);
+}
+.data_box:nth-child(2):hover > h1{
+    color: white;
+}
+.data_box:nth-child(4):hover > h1{
+    color: white;
+}
+.data_box:nth-child(5):hover > h1{
+    color: white;
+}
+.data_box:nth-child(7):hover > h1{
+    color: white;
+}
+.data_box:nth-child(3):hover > h1{
+    color: rgba(0,0,0, 0.308);
+}
+.data_box:nth-child(6):hover > h1{
+    color: rgba(0,0,0, 0.308);
+}
+.data_box:nth-child(8):hover > h1{
+    color: rgba(0,0,0, 0.308);
+}
+.data_box p{
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 16px;
+    color: #cfcfcf;
+    margin-bottom: 10px;
+    transition: all 200ms ease;
+}
+.data_box:nth-child(3) p{
+    color: #d3d3d3;
+}
+.data_box:nth-child(6) p{
+    color: #d3d3d3;
+}
+.data_box:nth-child(8) p{
+    color: #d3d3d3;
+}
+.data_box:nth-child(2):hover > p{
+    color: #d3d3d3;
+}
+.data_box:nth-child(4):hover > p{
+    color: #d3d3d3;
+}
+.data_box:nth-child(5):hover > p{
+    color: #d3d3d3;
+}
+.data_box:nth-child(7):hover > p{
+    color: #d3d3d3;
+}
+.data_box:nth-child(3):hover > p{
+    color: #cfcfcf;
+}
+.data_box:nth-child(6):hover > p{
+    color: #cfcfcf;
+}
+.data_box:nth-child(8):hover > p{
+    color: #cfcfcf;
+}
+.data_box a{
+    border: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fd1056;
+    margin-top: 10px;
+    transition: all 200ms ease;
+}
+.data_box a:hover{
+    color: #08fdd8;
+}
 @media only screen and (max-width: 1300px){
-    .main_project_page_databox{
+    .data_box{
         width: 25vw;
-        max-width: 25vw;
         height: 25vw;
     }
-}
-/* @media only screen and (max-width: 700px){
-    .main_project_page_databox{
-        width: 33.33vw;
-        max-width: 33.33vw;
-        height: 33.33vw;
+    .animation_box{
+        width: 25vw;
+        height: 25vw;
     }
-} */
+    .main_project_page{
+        width: 100%;
+        left: 0;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .data_box h1{
+        font-size: 25px;
+    }
+    .data_box p{
+        width: 95%;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .data_box h1{
+        font-size: 20px;
+    }
+    .data_box p{
+        width: 95%;
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 800px){
+.data_box{
+    /* width: 50vw; */
+    height: 28vw;
+}
+.animation_box{
+    /* width: 50vw; */
+    height: 28vw;
+}
+}
 @media only screen and (max-width: 700px){
-    .main_project_page_databox{
+    .main_project_page_head a{
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+    .data_box{
         width: 50vw;
-        max-width: 50vw;
         height: 50vw;
     }
+    .animation_box{
+        width: 50vw;
+        height: 50vw;
+    }
+    .data_box h1{
+        font-size: 30px;
+    }
+    .data_box p{
+        width: 90%;
+        font-size: 16px;
+    }
+    .data_box:nth-child(4){
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+    .data_box:nth-child(5){
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+    .data_box:nth-child(8){
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+    .data_box:nth-child(1){
+        background-color: rgb(255, 255, 255);
+    }
+    .data_box:nth-child(2){
+        background-color: rgb(255, 255, 255);
+    }
+    .data_box:nth-child(3){
+        background-color: rgb(255, 255, 255);
+    }
+    .data_box:nth-child(6){
+        background-color: rgb(255, 255, 255);
+    }
+    .data_box:nth-child(7){
+        background-color: rgb(255, 255, 255);
+    }
+    .data_box:nth-child(4):hover{
+        background-color: white;
+    }
+    .data_box:nth-child(5):hover{
+        background-color: white;
+    }
+    .data_box:nth-child(8):hover{
+        background-color: white;
+    }
+    .data_box:nth-child(1):hover{
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+    .data_box:nth-child(2):hover{
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+    .data_box:nth-child(3):hover{
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+    .data_box:nth-child(6):hover{
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+    .data_box:nth-child(7):hover{
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+    .data_box:nth-child(1) h1{
+        color: rgba(0,0,0, 0.308);
+    }
+    .data_box:nth-child(2) h1{
+        color: rgba(0,0,0, 0.308);
+    }
+    .data_box:nth-child(3) h1{
+        color: rgba(0,0,0, 0.308);
+    }
+    .data_box:nth-child(4) h1{
+        color: white;
+    }
+    .data_box:nth-child(5) h1{
+        color: white;
+    }
+    .data_box:nth-child(6) h1{
+        color: rgba(0,0,0, 0.308);
+    }
+    .data_box:nth-child(7) h1{
+        color: rgba(0,0,0, 0.308);
+    }
+    .data_box:nth-child(8) h1{
+        color: white;
+    }
+    .data_box:nth-child(1):hover > h1{
+        color: white;
+    }
+    .data_box:nth-child(2):hover > h1{
+        color: white;
+    }
+    .data_box:nth-child(3):hover > h1{
+        color: white;
+    }
+    .data_box:nth-child(4):hover > h1{
+        color: rgba(0,0,0, 0.308);
+    }
+    .data_box:nth-child(5):hover > h1{
+        color: rgba(0,0,0, 0.308);
+    }
+    .data_box:nth-child(6):hover > h1{
+        color: white;
+    }
+    .data_box:nth-child(7):hover > h1{
+        color: white;
+    }
+    .data_box:nth-child(8):hover > h1{
+        color: rgba(0,0,0, 0.308);
+    }
+    .data_box:nth-child(1) p{
+        color: #cfcfcf;
+    }
+    .data_box:nth-child(2) p{
+        color: #cfcfcf;
+    }
+    .data_box:nth-child(3) p{
+        color: #cfcfcf;
+    }
+    .data_box:nth-child(4) p{
+        color: #d3d3d3;
+    }
+    .data_box:nth-child(5) p{
+        color: #d3d3d3;
+    }
+    .data_box:nth-child(6) p{
+        color: #cfcfcf;
+    }
+    .data_box:nth-child(7) p{
+        color: #cfcfcf;
+    }
+    .data_box:nth-child(8) p{
+        color: #d3d3d3;
+    }
+    .data_box:nth-child(1):hover > p{
+        color: #d3d3d3;
+    }
+    .data_box:nth-child(2):hover > p{
+        color: #d3d3d3;
+    }
+    .data_box:nth-child(3):hover > p{
+        color: #d3d3d3;
+    }
+    .data_box:nth-child(4):hover > p{
+        color: #cfcfcf;
+    }
+    .data_box:nth-child(5):hover > p{
+        color: #cfcfcf;
+    }
+    .data_box:nth-child(6):hover > p{
+        color: #d3d3d3;
+    }
+    .data_box:nth-child(7):hover > p{
+        color: #d3d3d3;
+    }
+    .data_box:nth-child(8):hover > p{
+        color: #cfcfcf;
+    }
+    
 }
+@media only screen and (max-width: 500px){
+
+.data_box h1{
+    font-size: 14px;
+}
+.data_box p{
+    font-size: 12px;
+}
+
+}
+@media only screen and (max-width: 350px){
+
+    .data_box h1{
+        font-size: 12px;
+    }
+    .data_box p{
+        font-size: 10px;
+    }
+    .data_box a{
+        font-size: 10px;
+    }
+    
+    }
+    @media only screen and (max-width: 300px){
+
+        .data_box h1{
+            font-size: 10px;
+        }
+        .data_box p{
+            font-size: 7px;
+        }
+        
+        }

@@ -1,21 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;400;500;600;700;800;900&family=Montserrat:wght@100;300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@100;300;400;500;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 .main_home_page {
-  display: flex;
-  flex-direction: row;
-  width: 90vw;
+  width: 100vw;
   min-height: 100vh;
   height: fit-content;
   padding: 0;
   margin: 0;
   position: relative;
   background-color: transparent;
-  left: 10vw;
+  left: 0vw;
   display: flex;
   flex-direction: column;
 }
 
 .front_main_page {
-  width: 100%;
+  width: 90vw;
   min-height: 100vh;
   max-height: 100vh;
   display: flex;
@@ -25,6 +23,8 @@
   background-color: transparent;
   position: relative;
   overflow-y: hidden;
+  overflow-x: hidden;
+  left: 10vw;
 }
 #front_lotti{
     position: absolute;
@@ -136,10 +136,8 @@
 #text {
   margin-left: 25px;
   color: #fd1056;
-  text-shadow: 0px 0px 0 #08fdd8, -1px 0px 0 #08fdd8, -2px 0px 0 #08fdd8,
-    -3px 0px 0 #08fdd8, -4px 0px 0 #08fdd8, -5px 0px 0 #08fdd8,
-    -6px 0px 0 #08fdd8, -7px 0px 6px rgba(0, 0, 0, 1),
-    -7px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 0px 0 #08fdd8, -1px 1px 0 #08fdd8, -2px 2px 0 #08fdd8,
+    -3px 3px 0 #08fdd8, -4px 4px 0 #08fdd8;
 }
 .about{
     color: #8d8d8d;
@@ -186,6 +184,10 @@
   .front_main_page img{
       height: 60%;
   }
+  .front_main_page{
+    width: 100%;
+    left: 0;
+  }
 }
 @media only screen and (max-width: 1000px) {
   .frontpage_name {
@@ -224,5 +226,8 @@
   #front_lotti{
     height: 40%;
     width : 100vw;
+}
+.about{
+  font-size: 10px;
 }
 }

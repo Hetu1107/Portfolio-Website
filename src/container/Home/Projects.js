@@ -1,116 +1,89 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../../style/Projects.css";
+import db from '.././firebase'
+import Lottie from "react-lottie";
+import project from '../../lotties/project.json'
 const data = [
   {
-    name: "hetu",
-    photo: "https://miro.medium.com/max/3200/1*afTS3knLUSHCJDirSOlq1g.jpeg",
-    github: "",
+    name: "Health is Wealth",
+    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+    github: "https://github.com/Hetu1107/Easy-Health_Care",
   },
   {
-    name: "hetu",
-    photo:
-      "https://img.freepik.com/free-photo/election-concept-person-dropping-ballot-card-into-vote-box-dark-cinematic-tone_34048-1399.jpg?size=626&ext=jpg",
-    github: "",
+    name : 'Student Class',
+    para : 'A Website for student to help for maintainig their assignment and announcements for their daily work...',
+    github : 'https://github.com/Hetu1107/Student-Class'
   },
   {
-    name: "hetu",
-    photo:
-      "https://www.educationalappstore.com/blog/wp-content/uploads/2018/08/best-to-do-list-apps-for-task-management.jpg",
-    github: "",
+    name: "Health is Wealth",
+    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+    github: "https://github.com/Hetu1107/Easy-Health_Care",
   },
   {
-    name: "hetu",
-    photo:
-      "https://store-images.s-microsoft.com/image/apps.53400.87827a86-723b-4333-99d3-b8bf0d4e784b.ed77a1c3-cb95-4b73-83df-42f694c180e9.ade5aab2-5134-455a-83d1-619fdd5be492",
-    github: "",
+    name: "Health is Wealth",
+    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+    github: "https://github.com/Hetu1107/Easy-Health_Care",
   },
   {
-    name: "hetu",
-    photo:
-      "https://myviewboard.com/blog/wp-content/uploads/2020/08/MP0027-01-scaled.jpg",
-    github: "",
+    name : 'Student Class',
+    para : 'A Website for student to help for maintainig their assignment and announcements for their daily work...',
+    github : 'https://github.com/Hetu1107/Student-Class'
   },
   {
-    name: "hetu",
-    photo:
-      "https://d8it4huxumps7.cloudfront.net/bites/wp-content/uploads/2019/08/14122623/How-to-make-the-best-use-of-your-college-alumni-association.jpg",
-    github: "",
+    name: "Health is Wealth",
+    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+    github: "https://github.com/Hetu1107/Easy-Health_Care",
   },
   {
-    name: "Hetu",
-    photo: "https://blog.hubspot.com/hubfs/google-quiz.jpg",
-    github: "",
+    name: "Health is Wealth",
+    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+    github: "https://github.com/Hetu1107/Easy-Health_Care",
   },
-  {
-    photo:
-      "https://res.cloudinary.com/dte7upwcr/image/upload/f_auto,w_1500/blog/blog/imagens-ecommerce.png",
-    name: "hetu",
-    github: "",
-  },
+  
 ];
+var inde = 0;
 function Projects() {
+  const [pro,setPro] = useState([])
+  useEffect(()=>{
+    db.collection('Projects').doc('IgdWBhfWk8IoJqrhhugS').collection('One').onSnapshot((snap)=>{
+      const array = [];
+      snap.docs.map((doc)=>{
+         array.push(doc.data())
+      })
+      setPro(array)
+    })
+  },[])
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: project,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
-    <div className="main_project_page">
+    <div className="main_project_page" id="project">
       <div className="main_project_page_head">
-        <h1>My Projects</h1>
+        <h1 data-aos="fade-right">My Projects</h1>
+        <a href="https://github.com/Hetu1107" target="_blank" data-aos="fade-left">View more</a>
       </div>
-      <div className="main_project_page_data">
-        {data.map((res, index) => {
-          return (
-            <div
-              className="main_project_page_databox"
-              id={`main_project_page_databox${index}`}
-            >
-              <div
-                className="main_project_page_data_img"
-                id={`main_project_page_data_img${index}`}
-              >
-                <img src={res.photo} />
-              </div>
-              <div
-                className="main_project_page_data_round"
-                onMouseOver={() => {
-                  document.getElementById(
-                    `main_project_page_databox${index}`
-                  ).style.opacity = "1";
-                  document.getElementById(
-                    `main_project_page_data_img${index}`
-                  ).style.transform = "scale(1.2)";
-                  var a = document.getElementById(
-                    `main_project_page_data_rounda${index}`
-                  );
+      <div className="main_project_page_data" data-aos="fade-up">
+        <div className="animation_box">
+        <Lottie options={defaultOptions} height={"80%"} width={"80%"} />
+        </div>
+      {
+        pro.map((res,index)=>{
+          return(
+        <div className="data_box" onMouseOver={()=>{
 
-                  a.style.width = "100px";
-                  a.style.height = "100px";
-                  a.style.fontSize = "25px";
-                }}
-                onMouseLeave={() => {
-                  document.getElementById(
-                    `main_project_page_databox${index}`
-                  ).style.opacity = "0.5";
-                  document.getElementById(
-                    `main_project_page_data_img${index}`
-                  ).style.transform = "scale(1)";
-                  var a = document.getElementById(
-                    `main_project_page_data_rounda${index}`
-                  );
-
-                  a.style.width = "0px";
-                  a.style.height = "0px";
-                  a.style.fontSize = "0px";
-                }}
-              >
-                <a
-                  href=""
-                  className="main_project_page_data_rounda"
-                  id={`main_project_page_data_rounda${index}`}
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          );
-        })}
+        }}>
+          <h1>{res.name}</h1>
+          <p>{res.about}</p>
+          <a href={res.github}>Read more</a>
+        </div>
+          )
+        })
+      }
       </div>
     </div>
   );

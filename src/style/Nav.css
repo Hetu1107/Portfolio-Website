@@ -11,6 +11,34 @@
     top: 0;
     background-color: #181818;
 }
+#portfolio{
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #fd1056;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000000;
+    border-radius: 5px;
+    transition: all 200ms ease;
+}
+#portfolio a{
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    font-family: "Libre Franklin", sans-serif;
+}
+#portfolio:hover{
+    opacity: 0.5;
+}
+#portfolio a i{
+    color: black;
+}
 #bar{
     display: none;
     position: fixed;
@@ -54,14 +82,12 @@
 .main_nav_head{
     font-family: "Libre Franklin", sans-serif;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 60px;
     margin: 0;
     padding: 0;
     color: #fd1056;
-  text-shadow: 0px 0px 0 #08fdd8, -1px 0px 0 #08fdd8, -2px 0px 0 #08fdd8,
-    -3px 0px 0 #08fdd8, -4px 0px 0 #08fdd8, -5px 0px 0 #08fdd8,
-    -6px 0px 0 #08fdd8, -7px 0px 6px rgba(0, 0, 0, 1),
-    -7px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 0 #08fdd8, -1px 1px 0 #08fdd8, -2px 2px 0 #08fdd8,
+    -3px 3px 0 #08fdd8, -4px 4px 0 #08fdd8;
 }
 .main_navbar_top h4{
     margin: 0;
@@ -79,7 +105,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 40%;
 }
 .main_navbar_mid a{
     display: flex;
@@ -135,5 +161,8 @@
     }
     #bar{
         display: flex;
+    }
+    #portfolio{
+        left: 10px;
     }
 }   

@@ -16,10 +16,22 @@
   top: 300vh;
   position: absolute;
 }
-.main_about_my_sef{
-  width: 100%;
+.main_about_my_self_col{
+  width: 90vw;
   min-height: 100vh;
   max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: 10vw;
+  overflow: hidden;
+}
+.main_about_my_sef{
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -84,13 +96,62 @@
   align-items: center;
   width: 45vw;
 }
-
+.rating_thing{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.rating_thing div{
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 300ms ease;
+  border-radius: 50%;
+} 
+.rating_thing div:hover{
+  background-color: white;
+}
+.rating_thing .round{
+  border-radius: 50%;
+  background-color: #ffffff28;
+  /* background-color: #fd1056; */
+}
+.rating_thing .line{
+    width: 60px;
+    height: 2px;
+    background-color: #fd1056;
+    opacity: 0.8;
+}
+.rating_thing div img{
+  width: 60%;
+  height: 60%;
+  background-clip: inherit;
+  background-position: center;
+  background-size:auto;
+}
 @media only screen and (max-width: 1300px){
   .main_about_my_self_left{
     width: 50vw;
   }
   .main_about_my_self_right{
     width: 50vw;
+  }
+  .main_about_my_self_col{
+    width: 100%;
+    left: 0;
+  }
+}
+@media only screen and (max-width: 800px){
+  .rating_thing div{
+    width: 130px;
+    height: 130px;
   }
 }
 @media only screen and (max-width: 700px){
@@ -104,5 +165,21 @@
   }
   .main_about_my_sef{
     margin-top: 100px;
+  }
+  .rating_thing div{
+    width: 100px;
+    height: 100px;
+  }
+  .rating_thing .line{
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 550px){
+  .rating_thing div{
+    width: 70px;
+    height: 70px;
+  }
+  .rating_thing .line{
+    width: 15px;
   }
 }

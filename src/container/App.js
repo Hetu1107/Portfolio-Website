@@ -4,14 +4,13 @@ import { useEffect } from 'react';
 import db from './firebase';
 import Navbar from './Navs/Navbar';
 import Home from './Home/Home';
+import Aos from 'aos';
+import "aos/dist/aos.css"
+
 function App() {
-  // useEffect(()=>{
-  //   db.collection('Projects').doc('IgdWBhfWk8IoJqrhhugS').collection('One').onSnapshot((snap)=>{
-  //     snap.docs.map((doc)=>{
-  //       console.log(doc.data());
-  //     })
-  //   })
-  // })
+  useEffect(()=>{
+    Aos.init({duration : 1000});
+  })
   return (
     <div className="App">
       <Navbar/>

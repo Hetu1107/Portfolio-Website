@@ -12,7 +12,7 @@ function Frontpage() {
     }
   };
   return (
-    <div className="front_main_page">
+    <div className="front_main_page" id="home">
       <div class="stars">
         <div class="star"></div>
         <div class="star"></div>
@@ -65,7 +65,7 @@ function Frontpage() {
         <div class="star"></div>
         <div class="star"></div> */}
       </div>
-      <div className="front_name">
+      <div className="front_name" data-aos="fade-right">
         <h1 className="frontpage_name">
           <span className="text_text">H</span>
           <span className="text_text">i</span>
@@ -98,7 +98,7 @@ function Frontpage() {
         <h2 className="about">Full stack developer / ML developer</h2>
         <div className="front_contact">Contant me!</div>
       </div>
-      <div id="front_lotti">
+      <div id="front_lotti" data-aos="fade-left">
       <Lottie 
 	    options={defaultOptions}
         height={'100%'}
