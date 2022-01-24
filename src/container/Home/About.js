@@ -42,20 +42,20 @@ function About() {
             Currently Exploaring Machine Learning and Deep Learning.Alway eager
             to learn new thing.
           </p>
-          <a href="">Contact Me any Time !</a>
+          <a href="https://drive.google.com/file/d/15xNTbHh-nUE8aWZVw5de4tzFZKV0qiP1/view?usp=sharing">Download my Resume !</a>
         </div>
         <div className="main_about_my_self_right" data-aos="fade-right">
           <Lottie options={defaultOptions} height={"400"} width={"100%"} />
         </div>
       </div>
       <div className="rating_thing">
-          <div className="round" data-aos="fade-right"><img src="https://cdn.codechef.com/sites/default/files/uploads/pictures/811b20a47eac52b10c90ab82e0628e21.png"/></div>
+          <a href="https://www.codechef.com/users/hetu_11" target="_blank"><div className="round" data-aos="fade-right"><img src="https://cdn.codechef.com/sites/default/files/uploads/pictures/811b20a47eac52b10c90ab82e0628e21.png"/></div></a>
           <div className="line"></div>
           <div className="round" data-aos="fade-down"><Lottie options={defaultOption} height={"100%"} width={"100%"} /></div>
           <div className="line"></div>
-          <div className="round" data-aos="fade-up"><img src="https://cdn.iconscout.com/icon/free/png-256/code-forces-3521352-2944796.png" /></div>
+          <a href="https://codeforces.com/profile/hetu_07" target="_blank"><div className="round" data-aos="fade-up"><img src="https://cdn.iconscout.com/icon/free/png-256/code-forces-3521352-2944796.png" /></div></a>
           <div className="line"></div>
-          <div className="round" data-aos="fade-left"><img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" /></div>
+          <a href="https://github.com/Hetu1107" target="_blank"><div className="round" data-aos="fade-left"><img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" /></div></a>
       </div>
     </div>
   );

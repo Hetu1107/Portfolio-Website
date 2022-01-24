@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../../style/Nav.css";
 import { Link } from "react-scroll";
-let one = false
+let one = false;
+
+// resume link 
+let Resume_Link = "https://drive.google.com/file/d/15xNTbHh-nUE8aWZVw5de4tzFZKV0qiP1/view?usp=sharing";
+
 function Navbar() {
   const [open, setopen] = useState(false);
   const [da,setda] = useState(false);
@@ -49,10 +53,10 @@ function resize()
     <>
       <div id="portfolio">
         <a
-          href="https://drive.google.com/file/d/15xNTbHh-nUE8aWZVw5de4tzFZKV0qiP1/view?usp=sharing"
+          href={Resume_Link}
           target="_blank"
         >
-          <i class="fas fa-id-badge"></i> - Portfolio
+          <i class="fas fa-id-badge"></i> - Resume
         </a>
       </div>
       <div id="bar" onClick={()=>{
@@ -81,14 +85,14 @@ function resize()
           <Link to="contact" smooth={true} duration={1000}>
             <a onClick={() => setda(false)}>Contact</a>
           </Link>
-          <a onClick={() => setda(false)} href="https://drive.google.com/file/d/15xNTbHh-nUE8aWZVw5de4tzFZKV0qiP1/view?usp=sharing" target="_blank">Portfolio</a>
+          <a onClick={() => setda(false)} href={Resume_Link} target="_blank">Resume</a>
         </div>
         <div className="main_navbar_bottom">
           <a href="https://github.com/" target="_blank">
             <i class="fab fa-github"></i>
           </a>
           <a
-            href="https://www.linkedin.com/in/hetu-patel-b96479202/"
+            href="https://www.linkedin.com/in/hetu-patel1107"
             target="_blank"
           >
             <i class="fab fa-linkedin"></i>

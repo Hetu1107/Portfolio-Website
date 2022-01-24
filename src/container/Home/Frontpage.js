@@ -1,7 +1,8 @@
 import React from "react";
 import "../../style/star.scss";
 import Lottie from 'react-lottie';
-import front from '../../lotties/front.json'
+import front from '../../lotties/front.json';
+import { Link } from "react-scroll";
 function Frontpage() {
   const defaultOptions = {
     loop: true,
@@ -96,7 +97,7 @@ function Frontpage() {
           <span className="text_text">r</span>
         </h1>
         <h2 className="about">Full stack developer / ML developer</h2>
-        <div className="front_contact">Contant me!</div>
+        <Link to="contact" smooth={true} duration={1000}> <div className="front_contact">Contant me!</div></Link>
       </div>
       <div id="front_lotti" data-aos="fade-left">
       <Lottie 
