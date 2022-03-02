@@ -88,7 +88,7 @@ function resize()
           <a onClick={() => setda(false)} href={Resume_Link} target="_blank">Resume</a>
         </div>
         <div className="main_navbar_bottom">
-          <a href="https://github.com/" target="_blank">
+          <a href="https://github.com/Hetu1107" target="_blank">
             <i class="fab fa-github"></i>
           </a>
           <a
