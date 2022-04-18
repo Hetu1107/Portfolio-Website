@@ -3,49 +3,50 @@ import "../../style/Projects.css";
 import db from '.././firebase'
 import Lottie from "react-lottie";
 import project from '../../lotties/project.json'
-const data = [
-  {
-    name: "Health is Wealth",
-    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
-    github: "https://github.com/Hetu1107/Easy-Health_Care",
-  },
-  {
-    name : 'Student Class',
-    para : 'A Website for student to help for maintainig their assignment and announcements for their daily work...',
-    github : 'https://github.com/Hetu1107/Student-Class'
-  },
-  {
-    name: "Health is Wealth",
-    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
-    github: "https://github.com/Hetu1107/Easy-Health_Care",
-  },
-  {
-    name: "Health is Wealth",
-    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
-    github: "https://github.com/Hetu1107/Easy-Health_Care",
-  },
-  {
-    name : 'Student Class',
-    para : 'A Website for student to help for maintainig their assignment and announcements for their daily work...',
-    github : 'https://github.com/Hetu1107/Student-Class'
-  },
-  {
-    name: "Health is Wealth",
-    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
-    github: "https://github.com/Hetu1107/Easy-Health_Care",
-  },
-  {
-    name: "Health is Wealth",
-    para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
-    github: "https://github.com/Hetu1107/Easy-Health_Care",
-  },
+// const data = [
+//   {
+//     name: "Health is Wealth",
+//     para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+//     github: "https://github.com/Hetu1107/Easy-Health_Care",
+//   },
+//   {
+//     name : 'Student Class',
+//     para : 'A Website for student to help for maintainig their assignment and announcements for their daily work...',
+//     github : 'https://github.com/Hetu1107/Student-Class'
+//   },
+//   {
+//     name: "Health is Wealth",
+//     para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+//     github: "https://github.com/Hetu1107/Easy-Health_Care",
+//   },
+//   {
+//     name: "Health is Wealth",
+//     para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+//     github: "https://github.com/Hetu1107/Easy-Health_Care",
+//   },
+//   {
+//     name : 'Student Class',
+//     para : 'A Website for student to help for maintainig their assignment and announcements for their daily work...',
+//     github : 'https://github.com/Hetu1107/Student-Class'
+//   },
+//   {
+//     name: "Health is Wealth",
+//     para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+//     github: "https://github.com/Hetu1107/Easy-Health_Care",
+//   },
+//   {
+//     name: "Health is Wealth",
+//     para: "A Web App for patiants and doctor to help in daily day lif.This site is uses React,Nodejs,Pandas,Numpy...",
+//     github: "https://github.com/Hetu1107/Easy-Health_Care",
+//   },
   
-];
+// ];
 var inde = 0;
 function Projects() {
   const [pro,setPro] = useState([])
   useEffect(()=>{
-    db.collection('Projects').doc('IgdWBhfWk8IoJqrhhugS').collection('One').onSnapshot((snap)=>{
+    console.log(db.collection('Projects'));
+    db.collection('Projects').onSnapshot((snap)=>{
       const array = [];
       snap.docs.map((doc)=>{
          array.push(doc.data())
